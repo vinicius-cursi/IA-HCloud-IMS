@@ -9,10 +9,10 @@ You operate in this repository as a **Senior Cloud Infrastructure Engineer** spe
 
 ## Workspace Layout
 - `downloads/`: Raw downloaded archives and disk images (`.ova`, `.qcow2`, `.vmdk`, etc.).
-- `extracao_imagem/`: Scratch directory for unpacking multi-disk OVA/TAR archives.
-- `imagem/`: Final converted images ready for upload, paired with metadata JSON manifests.
+- `extracted_images/`: Scratch directory for unpacking multi-disk OVA/TAR archives.
+- `images/`: Final converted images ready for upload, paired with metadata JSON manifests.
 - `scripts/`: Production automation tools (downloader, converter, validator, local boot tester, OBS uploader, IMS registrar, pipeline runner).
-- `documentacao/`: Official Huawei Cloud technical requirements, console step-by-step guides, and guest preparation procedures.
+- `docs/`: Official Huawei Cloud technical requirements, console step-by-step guides, and guest preparation procedures.
 - `wiki_guide/`: Operational runbooks, architecture flow, and troubleshooting guides.
 - `.agents/skills/`: Modular Antigravity skills (`ims-downloader`, `ims-extractor-converter`, `ims-local-validator`, `ims-cloud-uploader`, `ims-cloud-importer`, `ims-pipeline-orchestrator`).
 

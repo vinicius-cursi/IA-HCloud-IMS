@@ -25,8 +25,8 @@ Unpacks incoming image containers, identifies virtual disk files, enforces Huawe
    ```bash
    python3 scripts/extract_and_convert.py \
        --input "downloads/<IMAGE_FILE>" \
-       --extract-dir "extracao_imagem" \
-       --output-dir "imagem" \
+       --extract-dir "extracted_images" \
+       --output-dir "images" \
        --format "qcow2"
    ```
 
@@ -36,8 +36,8 @@ Unpacks incoming image containers, identifies virtual disk files, enforces Huawe
    - Target Fast Import format: `--format raw` or `--format zvhd2` (requires `qemu-img-hw`)
 
 3. **Output Artifacts**:
-   - Converted image: `imagem/<image_name>.<format>`
-   - Technical manifest: `imagem/<image_name>.<format>.json`
+   - Converted image: `images/<image_name>.<format>`
+   - Technical manifest: `images/<image_name>.<format>.json`
 
 ## References
 - See the complete matrix in [formats_and_conversions.md](./references/formats_and_conversions.md).

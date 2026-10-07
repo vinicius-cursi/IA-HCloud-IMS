@@ -21,10 +21,10 @@ Antigravity uses progressive disclosure to keep the context clean:
   downloads/                  <-- Raw archive + integrity JSON manifest
        │
        ▼ (ims-extractor-converter)
-  extracao_imagem/            <-- Unpacked components; enforces single-disk rule
+  extracted_images/            <-- Unpacked components; enforces single-disk rule
        │
        ▼ (qemu-img / qemu-img-hw)
-  imagem/                     <-- Clean converted image (.qcow2, .raw, .zvhd2)
+  images/                     <-- Clean converted image (.qcow2, .raw, .zvhd2)
        │
        ├─► (ims-local-validator) --> validate_image.py (Static compliance checks)
        │
@@ -49,7 +49,7 @@ When handling an incoming image, the agent executes the following logic:
 
 2. **Package Format**:
    - If `.ova`, `.tar`, or `.zip`:
-     - Unpacks files into `extracao_imagem/`.
+     - Unpacks files into `extracted_images/`.
      - Inspects disk count.
      - **If more than 1 disk is detected**: Warns the user and isolates the primary system disk (index 0).
    - If standalone disk (`.vmdk`, `.vhd`, `.vhdx`, `.raw`, `.qcow2`): Proceeds directly to conversion.

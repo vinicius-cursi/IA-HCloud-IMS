@@ -20,11 +20,11 @@ qemu-system-x86_64 \
     -m 2048 \
     -smp 2 \
     -machine q35,accel=kvm \
-    -drive file=imagem/server.qcow2,if=virtio,format=qcow2,snapshot=on \
+    -drive file=images/server.qcow2,if=virtio,format=qcow2,snapshot=on \
     -net nic,model=virtio \
     -net user \
     -nographic \
-    -serial file:imagem/server.qcow2.boot_test.log \
+    -serial file:images/server.qcow2.boot_test.log \
     -no-reboot
 ```
 

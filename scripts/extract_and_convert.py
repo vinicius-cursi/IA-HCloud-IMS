@@ -217,8 +217,8 @@ def process_pipeline(input_path, extract_dir, output_dir, target_format="qcow2",
 def main():
     parser = argparse.ArgumentParser(description="Image extraction and format converter for Huawei Cloud IMS")
     parser.add_argument("--input", required=True, help="Path to input image/archive (.ova, .vmdk, .qcow2, etc.)")
-    parser.add_argument("--extract-dir", default="extracao_imagem", help="Scratch directory for extraction")
-    parser.add_argument("--output-dir", default="imagem", help="Output directory for converted image")
+    parser.add_argument("--extract-dir", default="extracted_images", help="Scratch directory for extraction")
+    parser.add_argument("--output-dir", default="images", help="Output directory for converted image")
     parser.add_argument("--format", default="qcow2", choices=["qcow2", "raw", "zvhd2", "vmdk", "vhd"], help="Target format (default: qcow2)")
     parser.add_argument("--disk-index", type=int, default=0, help="Disk index to isolate from multi-disk packages (default: 0)")
     parser.add_argument("--compress", action="store_true", help="Enable QCOW2 compression (-c)")

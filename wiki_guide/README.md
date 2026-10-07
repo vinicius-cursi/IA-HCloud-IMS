@@ -26,8 +26,8 @@ IMS_Huawei_Image/
 ├── AGENTS.md                     # Senior Cloud Engineer instructions
 ├── GEMINI.md                     # Context directives for agents
 ├── downloads/                    # Inbound image files (.ova, .qcow2, .vmdk)
-├── extracao_imagem/              # Intermediate extraction directory for multi-disk packages
-├── imagem/                       # Converted production-ready images & JSON manifests
+├── extracted_images/             # Intermediate extraction directory for multi-disk packages
+├── images/                       # Converted production-ready images & JSON manifests
 ├── scripts/                      # Automation CLI tools
 │   ├── setup_prerequisites.sh    # Environment setup & dependency bootstrap
 │   ├── download_image.py         # Resumable downloader with hash check
@@ -38,7 +38,7 @@ IMS_Huawei_Image/
 │   ├── import_ims_image.py       # IMS API registration client
 │   ├── pipeline.py               # Unified end-to-end pipeline runner
 │   └── huawei_env.sh.example     # Environment variables template
-├── docs/ (documentacao/)         # Official requirements & setup guides
+├── docs/                         # Official requirements & setup guides
 │   ├── manual_portal_creation.md
 │   ├── huawei_ims_specifications.md
 │   ├── env_vars_guide.md

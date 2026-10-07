@@ -51,7 +51,7 @@ flowchart TD
 │       ├── ims-cloud-uploader/      # High-speed OBS multipart uploader
 │       ├── ims-cloud-importer/      # IMS API registrar & job tracker
 │       └── ims-pipeline-orchestrator/ # End-to-end pipeline runner
-├── docs/ (documentacao/)
+├── docs/
 │   ├── manual_portal_creation.md    # Web console step-by-step walkthrough
 │   ├── huawei_ims_specifications.md # Official Huawei Cloud specifications
 │   ├── env_vars_guide.md            # IAM credentials and environment configuration
@@ -74,8 +74,8 @@ flowchart TD
 │   ├── pipeline.py                  # End-to-end unified CLI
 │   └── huawei_env.sh.example        # Environment variables template
 ├── downloads/                       # Inbound downloaded images (.gitkeep)
-├── extracao_imagem/                 # Scratch folder for archive extraction (.gitkeep)
-├── imagem/                          # Converted output images & manifests (.gitkeep)
+├── extracted_images/                # Scratch folder for archive extraction (.gitkeep)
+├── images/                          # Converted output images & manifests (.gitkeep)
 ├── AGENTS.md                        # Senior Cloud Engineer persona & directives
 ├── GEMINI.md                        # Workspace context pointers
 └── requirements.txt                 # Python dependencies
@@ -154,16 +154,16 @@ python3 scripts/download_image.py --url "<URL>" --output-dir downloads/
 python3 scripts/extract_and_convert.py --input downloads/appliance.ova --format qcow2
 
 # 3. Static compliance validation
-python3 scripts/validate_image.py --image imagem/appliance.qcow2 --os-type linux
+python3 scripts/validate_image.py --image images/appliance.qcow2 --os-type linux
 
 # 4. Local headless boot smoke test (30s snapshot)
-python3 scripts/test_local_boot.py --image imagem/appliance.qcow2 --timeout 30
+python3 scripts/test_local_boot.py --image images/appliance.qcow2 --timeout 30
 
 # 5. Upload to OBS bucket
-python3 scripts/upload_to_obs.py --image imagem/appliance.qcow2
+python3 scripts/upload_to_obs.py --image images/appliance.qcow2
 
 # 6. Register private image in IMS
-python3 scripts/import_ims_image.py --manifest imagem/appliance.qcow2.obs_upload.json
+python3 scripts/import_ims_image.py --manifest images/appliance.qcow2.obs_upload.json
 ```
 
 ---

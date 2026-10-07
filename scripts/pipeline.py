@@ -29,8 +29,8 @@ def run_pipeline(url=None, local_input=None, target_format="qcow2", os_type="lin
     scripts_dir = os.path.dirname(os.path.abspath(__file__))
     workspace_dir = os.path.dirname(scripts_dir)
     downloads_dir = os.path.join(workspace_dir, "downloads")
-    extract_dir = os.path.join(workspace_dir, "extracao_imagem")
-    output_dir = os.path.join(workspace_dir, "imagem")
+    extract_dir = os.path.join(workspace_dir, "extracted_images")
+    output_dir = os.path.join(workspace_dir, "images")
 
     start_total_time = time.time()
     input_file = local_input

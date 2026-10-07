@@ -160,7 +160,7 @@ def main():
         "is_quick_import": is_quick,
         "created_at": datetime.now(timezone.utc).isoformat()
     }
-    rec_file = f"imagem/{image_name}.ims_registration.json"
+    rec_file = f"images/{image_name}.ims_registration.json"
     with open(rec_file, 'w') as rf:
         json.dump(record, rf, indent=2)
 

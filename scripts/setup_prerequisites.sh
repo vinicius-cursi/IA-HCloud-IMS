@@ -120,7 +120,7 @@ fi
 
 # 4. Workspace directory layout
 echo -e "\n${BLUE}4. Ensuring workspace directories...${NC}"
-for DIR in downloads extracao_imagem imagem scripts documentacao wiki_guide; do
+for DIR in downloads extracted_images images scripts docs wiki_guide; do
     mkdir -p "${WORKSPACE_DIR}/${DIR}"
     echo -e " [${GREEN}OK${NC}] Directory ready: ${DIR}/"
 done

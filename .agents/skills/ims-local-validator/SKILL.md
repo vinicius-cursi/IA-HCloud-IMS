@@ -15,7 +15,7 @@ Performs automated pre-flight quality assurance and compatibility testing on con
 Run the validator script [validate_image.py](../../../scripts/validate_image.py):
 ```bash
 python3 scripts/validate_image.py \
-    --image "imagem/<IMAGE_FILE>.qcow2" \
+    --image "images/<IMAGE_FILE>.qcow2" \
     --os-type linux \
     --boot-mode bios
 ```
@@ -32,7 +32,7 @@ Checked criteria:
 Run the non-destructive headless boot smoke test using [test_local_boot.py](../../../scripts/test_local_boot.py):
 ```bash
 python3 scripts/test_local_boot.py \
-    --image "imagem/<IMAGE_FILE>.qcow2" \
+    --image "images/<IMAGE_FILE>.qcow2" \
     --timeout 30 \
     --memory 2048
 ```

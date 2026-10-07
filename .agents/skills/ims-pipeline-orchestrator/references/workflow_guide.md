@@ -9,7 +9,7 @@ flowchart TD
     C -->|Multiple Disks| D["Isolate Primary System Disk & Log Warning"]
     C -->|Single Disk| E["Convert to QCOW2 / ZVHD2"]
     D --> E
-    E -->|imagem/| F["Static Validation (Huawei Cloud Limits)"]
+    E -->|images/| F["Static Validation (Huawei Cloud Limits)"]
     F --> G["Dynamic Local Smoke Boot (QEMU VirtIO)"]
     G --> H{"Boot Succeeded?"}
     H -->|No / Kernel Panic| I["Halt Pipeline & Output Diagnostics"]

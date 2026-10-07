@@ -26,10 +26,10 @@ scripts/huawei_env.sh
 # Large disk images and runtime files (preserve .gitkeep)
 downloads/*
 !downloads/.gitkeep
-extracao_imagem/*
-!extracao_imagem/.gitkeep
-imagem/*
-!imagem/.gitkeep
+extracted_images/*
+!extracted_images/.gitkeep
+images/*
+!images/.gitkeep
 
 # Logs, test outputs and checkpoints
 *.log

@@ -28,13 +28,13 @@ Supported variables:
 Execute [upload_to_obs.py](../../../scripts/upload_to_obs.py):
 ```bash
 python3 scripts/upload_to_obs.py \
-    --image "imagem/<IMAGE_FILE>.qcow2"
+    --image "images/<IMAGE_FILE>.qcow2"
 ```
 
 To test variables and connectivity without transferring data:
 ```bash
 python3 scripts/upload_to_obs.py \
-    --image "imagem/<IMAGE_FILE>.qcow2" \
+    --image "images/<IMAGE_FILE>.qcow2" \
     --dry-run
 ```
 
