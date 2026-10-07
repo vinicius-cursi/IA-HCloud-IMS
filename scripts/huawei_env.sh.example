@@ -1,0 +1,39 @@
+#!/usr/bin/env bash
+# ==============================================================================
+# Environment Configuration Template for Huawei Cloud OBS & IMS
+# Usage: source scripts/huawei_env.sh
+# NEVER commit your real secrets to Git!
+# ==============================================================================
+
+# 1. Huawei Cloud IAM Access Keys (AK/SK)
+export HWC_AK="YOUR_ACCESS_KEY_ID_HERE"
+export HWC_SK="YOUR_SECRET_ACCESS_KEY_HERE"
+
+# 2. Region & Project ID
+# Regional examples:
+# sa-brazil-1 (Sao Paulo), la-south-2 (Santiago), na-mexico-1 (Mexico City)
+# ap-southeast-1 (Hong Kong), af-south-1 (Johannesburg), eu-west-101 (Dublin)
+export HWC_REGION="sa-brazil-1"
+export HWC_PROJECT_ID="YOUR_PROJECT_ID_HERE"
+
+# 3. Object Storage Service (OBS) Bucket
+# The bucket MUST use the STANDARD storage tier and reside in the SAME region as IMS!
+export HWC_OBS_BUCKET="my-huawei-ims-bucket"
+export HWC_OBS_ENDPOINT="https://obs.sa-brazil-1.myhuaweicloud.com"
+
+# 4. Backward-Compatible Aliases (HUAWEI_*)
+export HUAWEI_AK="$HWC_AK"
+export HUAWEI_SK="$HWC_SK"
+export HUAWEI_REGION="$HWC_REGION"
+export HUAWEI_PROJECT_ID="$HWC_PROJECT_ID"
+export OBS_BUCKET="$HWC_OBS_BUCKET"
+export OBS_ENDPOINT="$HWC_OBS_ENDPOINT"
+
+# 5. Optional IMS Defaults
+export IMS_IMAGE_NAME="ubuntu-22.04-custom-ims"
+export IMS_IMAGE_DESCRIPTION="Custom image prepared via Antigravity image pipeline"
+export IMS_MIN_DISK="40"            # In GB (Linux: min 10-1024, Windows: min 20-1024)
+export IMS_OS_VERSION="Ubuntu 22.04 server 64bit"
+export IMS_IS_QUICK_IMPORT="false"   # true for RAW/ZVHD2 Fast Create, false for standard
+
+echo "[OK] Huawei Cloud environment variables exported into current shell session."

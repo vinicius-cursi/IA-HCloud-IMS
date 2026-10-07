@@ -1,0 +1,40 @@
+# Python cache & artifacts
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+
+# Virtual environment
+.venv/
+env/
+venv/
+ENV/
+
+# Tool binaries & local cache
+bin/
+*.deb
+*.tar.gz
+*.tgz
+*.zip
+
+# Sensitive credentials & environment files
+scripts/huawei_env.sh
+*.env
+.env*
+!*.env.example
+
+# Large disk images and runtime files (preserve .gitkeep)
+downloads/*
+!downloads/.gitkeep
+extracao_imagem/*
+!extracao_imagem/.gitkeep
+imagem/*
+!imagem/.gitkeep
+
+# Logs, test outputs and checkpoints
+*.log
+*.boot_test.log
+*.checkpoint
+.obsutil_checkpoint/
+.obsutil_log/
+.obsutilconfig

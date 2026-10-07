@@ -1,0 +1,8 @@
+# Dependências do Projeto IMS Huawei Cloud
+requests>=2.28.0
+urllib3>=1.26.0
+
+# SDKs opcionais da Huawei Cloud (para integração nativa opcional via API/SDK)
+# huaweicloudsdkcore>=3.1.0
+# huaweicloudsdkims>=3.1.0
+# esdk-obs-python>=3.21.8
